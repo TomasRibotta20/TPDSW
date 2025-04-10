@@ -7,8 +7,8 @@
 * 52309 - Ribotta, Tomas Nicolas
 
 ### Repositorios
-* [frontend app]([http://hyperlinkToGihubOrGitlab](https://github.com/TomasRibotta20/FrontEnd_fantasy))
-* [backend app]([http://hyperlinkToGihubOrGitlab](https://github.com/TomasRibotta20/BackEnd_Fantasy))
+* [frontend app](https://github.com/TomasRibotta20/FrontEnd_fantasy)
+* [backend app](https://github.com/TomasRibotta20/BackEnd_Fantasy)
 
 
 ## Tema
