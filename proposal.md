@@ -19,37 +19,31 @@ Una aplicacion web de "Fantasy Fubtol" en la cual cada usuario puede construir s
 ### Modelo
 ![imagen del modelo](Diag1.png)
 
-*Nota*: incluir un link con la imagen de un modelo, puede ser modelo de dominio, diagrama de clases, DER. Si lo prefieren pueden utilizar diagramas con [Mermaid](https://mermaid.js.org) en lugar de imágenes.
 
 ## Alcance Funcional 
 
 ### Alcance Mínimo
 
-*Nota*: el siguiente es un ejemplo para un grupo de 3 integrantes para un sistema de hotel. El 
-
 Regularidad:
 |Req|Detalle|
 |:-|:-|
-|CRUD simple|1. CRUD Tipo Habitacion<br>2. CRUD Servicio<br>3. CRUD Localidad|
-|CRUD dependiente|1. CRUD Habitación {depende de} CRUD Tipo Habitacion<br>2. CRUD Cliente {depende de} CRUD Localidad|
-|Listado<br>+<br>detalle| 1. Listado de habitaciones filtrado por tipo de habitación, muestra nro y tipo de habitación => detalle CRUD Habitacion<br> 2. Listado de reservas filtrado por rango de fecha, muestra nro de habitación, fecha inicio y fin estadía, estado y nombre del cliente => detalle muestra datos completos de la reserva y del cliente|
-|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva|
+|CRUD simple|1. CRUD Usuario<br>2. CRUD Club<br>3. CRUD Posición|
+|CRUD dependiente|1. CRUD Equipo {depende de} CRUD Usuario y CRUD Jugador<br>2. CRUD Jugador {depende de} CRUD Posisción y CRUD Club|
+|Listado<br>+<br>detalle| 1. Listado de jugadores filtrado por club, muestra jugadores del club y posición del jugador => detalle muestra datos completos de jugador<br> 2. Listado de jugadores filtrado por posición, muestra nombre del jugador y equipo => detalle muestra datos completos de cada jugador|
+|CUU/Epic|1. Modificar equipo<br>2. Calcular puntaje para cada jugador|
 
 
 Adicionales para Aprobación
 |Req|Detalle|
 |:-|:-|
-|CRUD |1. CRUD Tipo Habitacion<br>2. CRUD Servicio<br>3. CRUD Localidad<br>4. CRUD Provincia<br>5. CRUD Habitación<br>6. CRUD Empleado<br>7. CRUD Cliente|
-|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva<br>3. Realizar el check-out y facturación de estadía y servicios|
-
+|CRUD |1. CRUD Usuario<br>2. CRUD Club<br>3. CRUD Posición<br>4. CRUD Equipo<br>5. CRUD Jugador<br>6. CRUD Precio<br>7. CRUD País<br>8. CRUD Jornada<br>9. CRUD Torneo<br>10. CRUD Partido<br>11. CRUD Mercado<br>12. CRUD Liga<br>13. CRUD Podio|
+|CUU/Epic|1. Calcular puntaje para cada jugador<br>2. Crear torneo<br>3. Modificar equipo|
 
 ### Alcance Adicional Voluntario
 
-*Nota*: El Alcance Adicional Voluntario es opcional, pero ayuda a que la funcionalidad del sistema esté completa y será considerado en la nota en función de su complejidad y esfuerzo.
-
 |Req|Detalle|
 |:-|:-|
-|Listados |1. Estadía del día filtrado por fecha muestra, cliente, habitaciones y estado <br>2. Reservas filtradas por cliente muestra datos del cliente y de cada reserve fechas, estado cantidad de habitaciones y huespedes|
-|CUU/Epic|1. Consumir servicios<br>2. Cancelación de reserva|
-|Otros|1. Envío de recordatorio de reserva por email|
+|Listados |1. Listados de jugadores filtrados por precio, país, posición y equipo<br>2. Listado de usuarios de un torneo filtrado por jornadas|
+|CUU/Epic|1. Realizar el login del usuario<br>2. Realizar transacción (Comprar/vender juador a otro usuario de ese torneo o al mercado)<br>3. Generar mercado diario<br>4. Asignar los premios a los jugadores<br>5. Modificar clausula de un jugador|
+
 
