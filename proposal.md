@@ -10,6 +10,20 @@
 * [frontend app](https://github.com/TomasRibotta20/FrontEnd_fantasy)
 * [backend app](https://github.com/TomasRibotta20/BackEnd_Fantasy)
 
+## Links PR/MR
+
+### Backend
+* [Pull requests backend](https://github.com/TomasRibotta20/BackEnd_Fantasy/pulls?q=is%3Apr+is%3Aclosed)
+
+Debido a un error inicial en el flujo de trabajo, las primeras funcionalidades se integraron mediante merge local. Como evidencia de la integración, se adjuntan los links a los Issues y los SHAs de los commits de cada funcionalidad.
+#### Featureds
+* [Position CRUD](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/411f56688ba1c282b7999aaab0ad8deacc4b92c4#diff-9323ef9ef0b095479dd6ac55023ee38e2a3afe63810172ae1611742574d4a3fa)
+* [Login](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/ece104152e98ce6ad9137db908c3fd32e29b1d2e)
+* [Zod](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/600db5834f7c8397e8def12484cfd9a0451a3068)
+* [Error Handler](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/6d5d153ebcd4a3551fe2ec46ced4efc971e5b795)
+* [Mailer](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/65650e26c3244861116e8ac6a8202637ac0e2186#diff-9ed00ecbde57465cf455979021274ab9f905e38f15eadbb3d0f32c91befd3da9)
+### Frontend
+* [Pull requests frontend](https://github.com/TomasRibotta20/FrontEnd_fantasy/pulls?q=is%3Apr+is%3Aclosed)
 
 ## Tema
 ### Descripción
