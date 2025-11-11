@@ -1,174 +1,63 @@
-# TP DSW
-tags: #dsw #tp
+# Propuesta TP DSW
 
-Status: draft
+## Grupo
+### Integrantes
+* 52867 - Mazalan, Ariel Ignacio
+* 52831 - Pacheco, Santiago Tomas
+* 52309 - Ribotta, Tomas Nicolas
 
-## 1. Objetivo
+### Repositorios
+* [frontend app](https://github.com/TomasRibotta20/FrontEnd_fantasy)
+* [backend app](https://github.com/TomasRibotta20/BackEnd_Fantasy)
 
-Desarrollar en grupo una aplicación web full stack en base a un alcance propuesto por los integrantes.
+## Links PR/MR
 
-Durante dicho desarrollo se deberá aplicar todo lo aprendido en la materia Desarrollo de Software.
+### Backend
+* [Pull requests backend](https://github.com/TomasRibotta20/BackEnd_Fantasy/pulls?q=is%3Apr+is%3Aclosed)
 
-## 2. Tema y Alcance
-El grupo debe deberá proponer a los docentes un tema para el trabajo práctico de su preferencia utilizando la [plantilla de propuesta](proposal.md)
+Debido a un error inicial en el flujo de trabajo, las primeras funcionalidades se integraron mediante merge local. Como evidencia de la integración, se adjuntan los links a los Issues y los SHAs de los commits de cada funcionalidad.
+#### Featureds
+* [Position CRUD](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/411f56688ba1c282b7999aaab0ad8deacc4b92c4#diff-9323ef9ef0b095479dd6ac55023ee38e2a3afe63810172ae1611742574d4a3fa)
+* [Login](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/ece104152e98ce6ad9137db908c3fd32e29b1d2e)
+* [Zod](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/600db5834f7c8397e8def12484cfd9a0451a3068)
+* [Error Handler](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/6d5d153ebcd4a3551fe2ec46ced4efc971e5b795)
+* [Mailer](https://github.com/TomasRibotta20/BackEnd_Fantasy/commit/65650e26c3244861116e8ac6a8202637ac0e2186#diff-9ed00ecbde57465cf455979021274ab9f905e38f15eadbb3d0f32c91befd3da9)
+### Frontend
+* [Pull requests frontend](https://github.com/TomasRibotta20/FrontEnd_fantasy/pulls?q=is%3Apr+is%3Aclosed)
 
-## 3. Requisitos
-El desarrollo de la aplicación debe:
-1. Desarrollarse en 2 partes: Frontend y Backend; agnósticas entre si, comunicadas mediante una API.
-2. Cumplir con los requisitos:  [técnicos](#3.1%20Requisitos%20técnicos) y [funcionales](#3.2%20Requisitos%20funcionales).
-3. Desarrollarse en grupo utilizando metodologías de gestión de proyecto y llevar evidencia de ello.
-4. Cumplir con las [entregas](#3.3%20Entregas) estipuladas.
-5. Utilizar github o gitlab para gestión del código fuente.
-6. Realizar una defensa oral del trabajo práctico para regularidad.
-7. Realizar otra defensa oral del trabajo práctico para la aprobación.
-8. Enviar la 
-9. Presentar la [documentación](#3.4%20Documentación) durante la defensa.
+## Tema
+### Descripción
 
-### 3.1 Requisitos técnicos
-La app cuenta con 2 partes: Backend y Frontend agnósticas entre si que se comunican mediante una API.
+Una aplicacion web de "Fantasy Fubtol" en la cual cada usuario puede construir su propio equipo de 11 jugadores adquiridos desde un mercado basado en la Liga Argentina de Futbol y afiliarse a una liga con otros usuarios. Estos jugadores iran sumando puntos semanalmente en funcion de su rendimiento en la vida real, que luego seran usados para determinar que usuario conformo el mejor equipo. Cada usuario comenzara con 11 jugadores al azar (que no excedan un market cap especifico) y un pequeño presupuesto. Cada jugador tiene un precio establecido el cual variaria dependiendo de sus ultimas actuaciones en partidos oficiales. Los usuarios pueden adquirir estos jugadores en un mercado que se actualizara diariamente con jugadores aleatorios, tambien pueden comprarselos a otros usuarios pagando una clausula de rescision. Sumado a esto cada usuario puede vender sus jugadores en el mercado al precio que el mismo tenga en el momento. Al final de la semana se conformara un podio entre los usuarios de una misma liga dependiendo de la cantidad de puntos que tengan, y en base a ese podio se repartiran los distintos premios (diferentes sumas de dinero para la mejora del equipo).
 
-#### 3.1.1 Backend
-El backend debe cumplir con las siguientes condiciones para regularidad y aprobación.
-
-##### Regularidad
-* Desarrollarse en JavaScript.
-* Utilizar un framework web que permita integrarse a las demás.
-* herramientas a través de middlewares, pluggins o modulos.
-* Exponer una API web (rest, tRPC o gRPC) para interactuar con el frontend.
-* Utilizar una base de datos persistente que acceda a través de un servicio externo (es decir que no sea una base de datos embebida).
-* La persistencia a la base de datos debe realizarse mediante un mapper (ORM/ODM/OXM). En caso que la base de datos utilizada no tenga un mapper disponible para JavaScript se deberá implementar la persistencai utilizando un patron Repository.
-* Realizarse mediante capas.
-* Validar entrada de datos, manejar e informar apropiadamente los errores a través de la API.
-* Las dependencias para ejecución, desarrollo y test deben estar correctamente registradas para ser instaladas automáticamente (e.j. package.json).
-
-##### Aprobación Directa o en Examen
-* Cumplir con todas las condiciones de regularidad.
-* Implementar 1 test automatizado por integrante.
-* Implementar 1 test de integración.
-* Implementar un login con autenticación propia o de third-party y al menos 2 niveles de acceso diferentes.
-* Proteger las diferentes rutas en base al nivel de acceso requerido.
-* Definir ambientes, ya sea mediante environment del framework o .env
-
-#### 3.1.2 Frontend
-El frontend debe cumplir con las siguientes condiciones para regularidad y aprobación.
-
-##### Regularidad
-* Desarrollarse utilizando un framework de Frontend.
-* Utilizar HTML5
-* Utilizar CSS según las directrices de alguna biblioteca de componentes, guía de estilo o framework de CSS y la metodología propuesta por el framework de frontend elegido. Se sugiere el uso de biblioteca de componentes;  preprocesadores: sass, scss, less, stylus, etc o frameworks de css: Pico.css, Bulma, Material, Tailwind, Bootstrap, etc.
-* Guía de estilos sugerida Airbnb Javascript https://github.com/airbnb/javascript
-* Aplicar la estrategia mobile-first para la escritura del código css de la aplicación
-* La app debe visualizarse correctamente en al menos 3 diferentes breakpoints: SM, MD, LG
-* Seguir buenas prácticas de UX/UI (Que no requiera manual de usuario o explicaciones específicas para utilizar la interfaz)
-* Las app debe mostrar las siguientes características entre sus componentes:
-	* Manejo de eventos del usuario: click, input, etc
-	* Ante una posibilidad de fallo, manejar el/los errores adecuadamente y de manera amigable al usuario
-	* Reactividad ante un estado
-	* Input property
-	* Output property
-* Implementar al menos un servicio.
-* Para el manejo de la información, por ej una respuesta de un endpoint o los datos a enviar en una request, representar en el código los modelos de objetos con clases, interfaces y tipos de datos custom.
-* De ser posible, implementar algún patrón de diseño orientado a objetos.
-* Las dependencias para ejecución, desarrollo y test deben estar correctamente registradas para ser instaladas automáticamente (e.j. package.json).
-
-##### Aprobación Directa o en Examen
-* Cumplir con las condiciones de regularidad.
-* Realizar al menos 1 test unitario de un componente.
-* Realizar al menos 1 test de end-to-end.
-* Implementar el login y proteger el acceso a las distintas partes del frontend en base a los niveles de usuarios del backend.
-* Definir ambientes, ya sea mediante environment del framework o .env
-
-### 3.2 Requisitos funcionales
-La app debe cumplir con los siguientes requisitos.
-
-#### Regularidad
-* 1 CRUD Simple por integrante
-* 1 CRUD Dependiente cada 2 integrantes o fracción.
-* 1 Listado con filtro (al menos un atributo) cada 2 integrantes o fracción.
-* Para cada listado, al seleccionar un elemento, se debe mostrar un detalle.
-* Debe implementar un caso de uso de usuario o epic, con valor para el negocio, cada 2 integrantes o fracción.
-
-#### Aprobación Directa o en Examen
-* CRUDs de todas las clases de negocio necesarias para el funcionamiento de la app.
-* Implementar 1 caso de uso usuario o epic, con valor para el negocio, por cada integrante.
-  Se deben implementar un mínimo de 2 relacionados entre si. Es decir que la data registrada por uno CU o epic sirva de input para otro.
-
-#### Alcance Adicional Voluntario
-De forma **opcional** y **voluntaria** los grupos podrán realizar CUU o epics, listados más complejos de los solicitados u otros requisitos como notificaciones, logs, etc; adicionales para completar la funcionalidad del sistema propuesto.
-
-Esto será considerado en la nota final en función de la complejidad y esfuerzo relativos a lo ya realizado.
+### Der Regularidad
+![imagen del modelo](./assets/DER_Regularidad.drawio.png)
 
 
-### 3.3 Entregas
-#### Propuesta del enunciado
-En la entrega se debe entregar a los profesores la [plantilla de propuesta](./proposal.md) actualizada con las condiciones de Regularidad y de Aprobación. Los profesores analizarán la propuesta y de ser necesario sugerirán ajustes hasta que esté correcta y sea aceptada.
+## Alcance Funcional 
 
-#### Regularidad
-En la entrega se debe entregar:
-* El README.md (o con un link) las instrucciones para instalar y ejecutar el proyecto sin conocimientos de cómo está desarrollado. El proyecto debe poder ejecutarse con scripts y las herramientas según las convenciones del lenguaje y/o framework utilizado (scripts en package.json, o tools específicas del framework).
-* Entregar la [proposal](./proposal.md) actualizada con links al pull request de back y/o front mediante el form publicado para cada año.
+### Alcance Mínimo
 
-Coordinar una defensa grupal con los profesores.
-
-#### Aprobación Directa o en Examen
-En la entrega se debe enviar:
-* Video explicando el funcionamiento del sistema
-* Documentación de la API de backend (según la tecnología y standard utilizados).
-* Evidencia del resultado de la ejecución de los tests automáticos.
-* Entregar la [proposal](./proposal.md) actualizada con links al pull request de back y/o front.
-* Incluir en el README.md (o con un link) las instrucciones para instalar y ejecutar el proyecto sin conocimientos de cómo está desarrollado. El proyecto debe poder ejecutarse con scripts y las herramientas según las convenciones del lenguaje y/o framework utilizado (scripts en package.json, o tools específicas del framework).
-* Links de Deploy
-* Credenciales para utilizar la aplicación deployada
-* Contacto para coordinar la defensa
-
-El envío se debe realizar por el form https://kutt.it/DSWEntregaSistemaFinal y coordinar con el docente una defensa grupal con los profesores.
-
-Para la Aprobación Directa la defensa debe pactarse con los docentes dentro de los plazos indicados a continuación.
-Para la Aprobación en Examen la defensa debe pactarse con los docentes y realizarse antes de la fecha de la mesa de examen.
-
-#### Fechas de entrega
-**Propuesta**: Durante Abril
-
-**Muestra de avance**: Inicio del segundo cuatrimestre
-
-**Primer Entrega de Regularidad/AD**: 17/10/2025
-
-**Primer Recuperatorio/Globalizador de Regularidad/AD**: 31/10/2025
-
-**Ultima instancia Recuperatorio/Globalizador de Regularidad/AD**: 14/11/2025
-
-### 3.4 Documentación
-La documentación debe presentarse para la instancia de defensa.
-
-Para conocer el detalle de la documentación referirse a [docs](docs.md).
-
-## 4. Gestión del proyecto
-**TODO: En revisión**
-
-El desarrollo de la app debe realizarse utilizando metodologías ágiles para la gestión del proyecto (Scrum, XP, etc).
-
-El grupo deberá llevar un registro de lo realizado, el mismo debe incluir como mínimo:
-* Tipo de metodología a utilizar para el seguimiento. ( Scrum, XP, etc.)
-* Minutas de avances o reuniones de coordinación del equipo.
-* Documentación de trackeo como desarrollo de features y bugfix, asignación de tareas, etc.
-
-Es de libre elección del alumno la herramienta a utilizar para el trackeo. Se recomienda el uso de github/gitlab proyects para integrar con el desarrollo de la misma pero en caso de utilizar otra en la documentación deberán incluirse los links a la tool para ello.
+Regularidad:
+|Req|Detalle|
+|:-|:-|
+|CRUD simple|1. CRUD Usuario<br>2. CRUD Club<br>3. CRUD Posición<br>|
+|CRUD dependiente|1. CRUD Partido {depende de} CRUD Equipo y CRUD Jugador<br>2. CRUD Jugador {depende de} CRUD Posición y CRUD Club|
+|Listado<br>+<br>detalle| 1. Listado de jugadores filtrado por club => detalle muestra datos completos de jugador<br> 2. Listado de jugadores filtrado por posición => detalle muestra datos completos de cada jugador|
+|CUU/Epic|1. Modificar equipo (En el momento en el cual el usuario desea crear un equipo le coloca un nombre y se creara un equipo con 11 jugadores aleatorios titulares y 4 suplentes, el cual posteriormente cuando este desee podrá modificar a su gusto ya que en esta instancia del proyecto los jugadores no van a tener un precio ni los usuarios presupuesto, por lo cual tendra acceso a cualquier jugador que este en la base de datos)<br>2. Calcular puntaje para Jornada (El administrador primeramente tendra que deshabilitar las modificaciones para indicarles a los usuarios que la jornada esta activa y no permitirles cambiar mas su equipo. Luego de eso procesara los datos para la jornada que estaria activa en la vida real, en esto se obtienen los datos de los partidos a traves de una api externa, se calculan los puntajes segun las reglas de negocio de nuestra api y luego se guardan en la base de datos. Luego el administrador podra habilitar nuevamente las modificaciones y los usuarios ver su puntaje para su equipo en cada una de las jornadas donde participo.)|
 
 
-## 5. Evaluación
+Adicionales para Aprobación
+|Req|Detalle|
+|:-|:-|
+|CRUD |1. CRUD Usuario<br>2. CRUD Club<br>3. CRUD Posición<br>4. CRUD Jugador<br>5. CRUD Precio<br>6. CRUD Jornada<br>7 CRUD Partido<br>8. CRUD Liga|
+|CUU/Epic|1. Calcular puntaje para Jornada<br>2. Crear torneo (El usuario podra crear un torneo e invitar amigos para jugar contra ellos, ganara el usario que mas puntos saque en cada fecha)<br>3. Modificar equipo|
 
-Durante la evaluación de cada entrega se considerarán:
-* Requisitos técnicos y funcionales de la etapa.
-* Adhesión a las directrices de UX/UI y buenas prácticas de programación.
-* Uso apropiado de la tecnología: librerías, frameworks, patrones, etc.
-* Documentación requerida.
-* Participación de los miembros del grupo.
-* Uso de git para el desarrollo.
-* Defensa oral del trabajo práctico.
-* Gestión y seguimiento del desarrollo de la app.
-* Innovación, investigación y desafíos asumidos.
-* Documentación solicitada.
+### Alcance Adicional Voluntario
 
-## 6. FAQ
+|Req|Detalle|
+|:-|:-|
+|Listados |1. Listados de jugadores filtrados por precio, país, posición y equipo<br>2. Listado de usuarios de un torneo filtrado por jornadas|
+|CUU/Epic|1. Realizar transacción (Comprar/vender juador a otro usuario de ese torneo o al mercado)<br>2. Generar mercado diario (Habrá una tienda en la cual diariamente apareceran 10 jugadores a precio de mercado y donde los usuarios pueden competir entre ellos para comprarlos)<br>3. Asignar los premios a los jugadores (Al final de cada jornada los 3 usuarios con mas puntos obtendran un premio en saldo de la aplicacion)<br>4. Modificar clausula de un jugador (Los usuarios tendran la posibilidad de comprar jugadores de otros usuarios unicamente por clausula de rescision. Cada usuario podra modificar la clausula de rescision de sus jugadores gastando saldo para ello)|
 
-En la sección de [FAQ](FAQ.md) podrán encontrar respuestas a las consultas más frecuentes que se van realizando.
+
