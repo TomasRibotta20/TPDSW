@@ -20,7 +20,7 @@ Utilizar las siguientes credenciales:
 > **Email:** `admin@admin.com`
 > **Contraseña:** `admin123`
 
-Dentro de la aplicación ya van a estar precargados los datos de la primera jornada, y va a estar preseteada como jornada activa la jornada 2. Dentro del lado de administrador podrás acceder a todos los CRUDs disponibles, así como al control de jornadas donde podrás elegir la jornada que está activa, habilitar y deshabilitar las modificaciones (lo cual permite o no que los usuarios puedan cambiar su equipo) y procesar jornadas (lo cual trae todos los datos para una jornada de cada uno de los jugadores que participaron de una API externa y calcula los puntajes para cada uno).
+Dentro de la aplicación ya van a estar precargados los datos de los partidos, jornadas,clubes y jugadores, y va a estar preseteada como jornada activa la jornada 1. Dentro del lado de administrador podrás acceder a todos los CRUDs disponibles, así como al control de jornadas donde podrás elegir la jornada que está activa, habilitar y deshabilitar las modificaciones (lo cual permite o no que los usuarios puedan cambiar su equipo) y procesar jornadas (lo cual trae todos los datos para una jornada de cada uno de los jugadores que participaron de una API externa y calcula los puntajes para cada uno).
 
 ### Para loguearte como Usuario
 
