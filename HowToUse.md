@@ -8,7 +8,18 @@
 
 4.  Una vez con el backend y el frontend descargados, realizar un `pnpm install` en ambos para descargar las dependencias necesarias en el proyecto.
 
-5.  Correr el backend con el comando `pnpm run start:dev` y el frontend con el comando `pnpm run dev` al mismo tiempo. Realizando esto, se le abrirá en un navegador la página principal del login en el puerto `5173`. A partir de aquí podrá realizar lo que desee, pero bajo ciertas recomendaciones indicadas abajo.
+5. La aplicacion utiliza una API externa para obtener los datos de los partidos. Para utilizarla debemos: <br>
+###  Obtener clave de API-Sports
+1. Regístrate en [API-Football](https://www.api-football.com/)
+2. Obtén tu clave API gratuita
+3. Crear un archivo .env que contenga las siguientes lineas<br>APISPORTS_KEY=Pega_AQUI_TU_CLAVE<br>AFA_LEAGUE_ID=128<br>AFA_SEASON=2021
+
+**Nota sobre límites del plan gratuito:**
+- 100 peticiones por día
+- 10 peticiones por minuto
+- El código ya implementa rate limiting automático
+
+6.  Correr el backend con el comando `pnpm run start:dev` y el frontend con el comando `pnpm run dev` al mismo tiempo. Realizando esto, se le abrirá en un navegador la página principal del login en el puerto `5173`. A partir de aquí podrá realizar lo que desee,hay ciertas recomendaciones indicadas abajo.
 
 ---
 
