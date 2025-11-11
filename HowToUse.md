@@ -4,7 +4,7 @@
 
 2.  Dentro del repositorio de backend, en una carpeta llamada `db`, encontrarás un archivo `.txt` llamado `docker run`. Es recomendable descargarlo y ejecutarlo en Docker para crear la *run* necesaria en el puerto en el cual está en el código del proyecto. Otra opción es cambiar las credenciales de conexión a la base de datos dentro del proyecto de backend en la siguiente dirección: `shared/db/orm.ts`.
 
-3.  Luego, dentro del repositorio del backend, habrá una carpeta llamada `db`. De ahí, descargar el archivo `.sql` con el nombre `db_DSW_Regularidad` y ejecutarlo en MySQL Workbench, ya que en este están precargados los datos necesarios para el correcto funcionamiento de la aplicación.
+3.  Luego, dentro del repositorio del backend, habrá una carpeta llamada `db`. De ahí, descargar el archivo `.sql` con el nombre `db_DSW_Regularidad`. Primeramente ejecutar el comando `pnpm run db:update` con la base de datos encendida para poder generar las tablas necesarias y luego ejecutar el .sql en MySQL Workbench, ya que en este están precargados los datos necesarios para el correcto funcionamiento de la aplicación.
 
 4.  Una vez con el backend y el frontend descargados, realizar un `pnpm install` en ambos para descargar las dependencias necesarias en el proyecto.
 
