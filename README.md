@@ -6,6 +6,8 @@
 * 52831 - Pacheco, Santiago Tomas
 * 52309 - Ribotta, Tomas Nicolas
 
+## Como utilizar la aplicacion: [Guia de uso](HowToUse.md)
+
 ### Repositorios
 * [frontend app](https://github.com/TomasRibotta20/FrontEnd_fantasy)
 * [backend app](https://github.com/TomasRibotta20/BackEnd_Fantasy)
